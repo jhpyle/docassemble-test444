@@ -1,11 +1,12 @@
 import os
 import sys
-from setuptools import setup, find_packages
+from setuptools import setup, find_namespace_packages
 from fnmatch import fnmatchcase
 from distutils.util import convert_path
 
 standard_exclude = ('*.pyc', '*~', '.*', '*.bak', '*.swp*')
 standard_exclude_directories = ('.*', 'CVS', '_darcs', './build', './dist', 'EGG-INFO', '*.egg-info')
+
 def find_package_data(where='.', package='', exclude=standard_exclude, exclude_directories=standard_exclude_directories):
     out = {}
     stack = [(convert_path(where), '', package)]
@@ -45,14 +46,13 @@ def find_package_data(where='.', package='', exclude=standard_exclude, exclude_d
 setup(name='docassemble.test444',
       version='0.0.1',
       description=('A docassemble extension.'),
-      long_description='This is a README',
+      long_description='This is a README.\r\n\r\nNow I am modifying this with the new pyproject.toml',
       long_description_content_type='text/markdown',
-      author='',
+      author='Jonathan Pyle',
       author_email='admin444@admin.com',
       license='The MIT License (MIT)',
       url='https://docassemble.org',
-      packages=find_packages(),
-      namespace_packages=['docassemble'],
+      packages=find_namespace_packages(),
       install_requires=[],
       zip_safe=False,
       package_data=find_package_data(where='docassemble/test444/', package='docassemble.test444'),
