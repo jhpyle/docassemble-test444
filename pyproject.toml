@@ -13,6 +13,10 @@ authors = [
     { name = "Jonathan Pyle", email = "admin444@admin.com" },
 ]
 dependencies = []
+license = "MIT"
+license-files = [
+    "LICENSE",
+]
 
 [project.urls]
 Homepage = "https://docassemble.org"
