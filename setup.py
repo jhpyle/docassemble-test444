@@ -46,15 +46,14 @@ def find_package_data(where='.', package='', exclude=standard_exclude, exclude_d
 setup(name='docassemble.test444',
       version='0.0.1',
       description=('A docassemble extension.'),
-      long_description='This is a README.\r\n\r\nNow I am modifying this with the new pyproject.toml',
+      long_description='This is a README.\r\n\r\nNow I am modifying this with the even newer pyproject.toml\r\n\r\nThe pyproject.toml on GitHub is missing the package, so I shall push a commit.',
       long_description_content_type='text/markdown',
       author='Jonathan Pyle',
       author_email='admin444@admin.com',
-      license='The MIT License (MIT)',
+      license='MIT',
       url='https://docassemble.org',
       packages=find_namespace_packages(),
       install_requires=[],
       zip_safe=False,
       package_data=find_package_data(where='docassemble/test444/', package='docassemble.test444'),
      )
-
